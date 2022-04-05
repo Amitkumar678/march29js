@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <h2 align="center">OBJECT</h2>
+ <br>
+<ul>
+ <li>object is non primitive datatype</li> 
+    <li>injavascript is everything is object</li>
+    <li>object can be written by key and value pair</li>
+    <li>privitive value meance that has no value and method</li>
+    <li>but object is nonprimitive datatype meance object can have value and method</li>
+    <li>primitive datatype is data that has primitive value</li>
+    <li>javascript object is collection is named value</li>
+</ul>
+<h2>OBJECT CREATE METHOD 1</h2>
+
+
+<h3> object litral created by {}</h3>
+<p>this is easiest way to creating the object and object litral is contain key and value pair</p>
+
+<pre>
+    const obj={
+        name:'abc',
+        age:22,
+        course:'mern',
+        group:'B+'
+        
+    }
+    console.log(obj);
+
+    console.log(obj['name']); //this is also possible acces the value by using squire braket[]
+</pre>
+
+<h3>creating method</h3>
+<p>object inside function is called method</p>
+<pre>
+    const obj={
+        name:'abc',
+        age:22,
+        course:'mern',
+        info:function (){
+            console.log('MY NAME IS'+this.name + "MY AGE IS"+this.age);
+        }
+    }
+    obj.info()
+</pre>
+
+
+ <h2> OBJECT MCREATE METHOD 2</h2>
+
+
+<h2> WE CAN CREATE OBJECT USING OBJECT CONSTRUCTOR</h2>
+<p>here also create object this is same as object litral only diffrent adding new keyword</p>
+
+<pre>
+    const obj=new Object()
+       obj.name='xyz'
+          console.log(obj);
+</pre>
+
+<h3>object .keys</h3>
+<p>here we find the all key in object</p>
+<pre>
+    const obj=new Object()
+obj.name='xyz'
+obj.age=22
+obj.course="mern"
+console.log(obj);
+
+const object=Object.keys(obj)
+</pre>
+
+<h3>object.value</h3>
+<p>here also find the value in whole object</p>
+<pre>
+    const obj=new Object()
+obj.name='xyz'
+obj.age=22
+obj.course="mern"
+console.log(obj);
+
+const object=Object.values(obj)
+</pre>
+
+<h3>spread oprator</h3>
+<p>spread oprator is used for sallow copy of the object</p>
+<pre>
+    const nam={
+        name:'amiit',
+        age:22,
+        id:'34db'
+    }
+    const nam1={
+        name:'abhishek',
+        age:23
+    }
+    const sum={...nam,...nam1}
+    console.log(sum);
+</pre>
+<h5> hre also use destructure</h5>
+<pre>const arr=[1,2,3,4,5,6,8]
+    console.log(...arr);</pre>
+
+
+<h2> creating object method 3</h2>
+
+<h2>OBJECT.CREATE</h2>
+<p> which allow us to create object by tacking refrence of existance</p>
+<pre>const obj=Object.create(nam)
+    obj.course='btech'
+    console.log(obj);</pre>
+
+
+    <h2>creating object method 4</h2>
+
+    <h2>function constuctor</h2>
+    <p>here also create object this is fourth method of creating object when we create multiple object then use the function constructor</p>
+    <pre>
+        function Person (name,course){
+            this.name=name,
+            this.age=course
+            }
+            const result=new Person('amit','btech')
+            console.log(result);
+    </pre>
+
+    <script src="script.js"></script>
+</body>
+</html>
